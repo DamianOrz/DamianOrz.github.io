@@ -1,5 +1,7 @@
+
 import React, { useState, useMemo } from 'react';
 import ReactDOM from 'react-dom/client';
+import DottedGlowBackground from './components/DottedGlowBackground';
 
 const PRICING = {
   individuo: { low: 180, mid: 360, high: 400 },
@@ -55,15 +57,25 @@ const App = () => {
             </div>
           </div>
           <div className="hidden md:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-graphite/70">
-            <a href="#calculadora" className="hover:text-petroleum transition-colors">Tarifas 2025</a>
+            <a href="#calculadora" className="hover:text-petroleum transition-colors text-petroleum font-extrabold">Tarifas 2025</a>
             <a href="#" className="bg-petroleum text-sand px-5 py-2.5 rounded-full hover:bg-deepGreen transition-all">Asesoría Personalizada</a>
           </div>
         </div>
       </nav>
 
       <header className="relative pt-16 pb-24 overflow-hidden bg-gradient-to-b from-white to-[#F9F7F2]">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="fade-in relative z-10">
+        {/* Integración de DottedGlowBackground para un look más sofisticado */}
+        <div className="absolute inset-0 pointer-events-none opacity-40">
+           <DottedGlowBackground 
+              color="rgba(14, 58, 71, 0.1)" 
+              glowColor="rgba(197, 160, 89, 0.4)" 
+              gap={24} 
+              radius={1.5}
+           />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
+          <div className="fade-in">
             <div className="flex items-center gap-2 mb-6 px-3 py-1.5 bg-petroleum/5 rounded-full border border-petroleum/10 w-fit">
               <span className="inline-block w-2 h-2 rounded-full bg-petroleum animate-pulse"></span>
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-petroleum">Temporada Fiscal 2025 Abierta</span>
