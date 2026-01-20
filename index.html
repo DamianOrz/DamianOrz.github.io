@@ -1,9 +1,466 @@
 <!DOCTYPE html>
-<html>
-  <head><title>DamianOrz</title></head>
-  <body>
-    <p>This paragraph is a part of HTML.</p>
-    <nav id="navigation"></nav>
-    <p>This paragraph is also a part of HTML.</p>
-  </body>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Culture | Analizador de Tarifas Boutique 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        petroleum: '#0E3A47',
+                        deepGreen: '#0B4F40',
+                        sand: '#F2E8D5',
+                        graphite: '#4A4A4A',
+                        goldSoft: '#C5A059'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .bg-grain {
+            background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Logic specific styles */
+        .step-active {
+            border-color: #0E3A47;
+            background-color: #F2E8D5;
+        }
+
+        .complexity-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .complexity-card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0E3A47;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F9F7F2] text-petroleum font-sans selection:bg-sand selection:text-petroleum">
+
+    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-sand">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-petroleum rounded-lg flex items-center justify-center text-sand shadow-lg">
+                    <span class="material-symbols-outlined">account_balance</span>
+                </div>
+                <div>
+                    <span class="block font-serif text-xl font-bold tracking-tight leading-none">PM Culture</span>
+                    <span class="block text-[10px] uppercase tracking-[0.2em] font-medium text-graphite">Boutique Fiscal Florida</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-graphite">
+                <a href="#metodo" class="hover:text-petroleum transition-colors">Nuestro Método</a>
+                <a href="#calculadora" class="hover:text-petroleum transition-colors">Tarifario 2026</a>
+                <a href="#" class="bg-petroleum text-sand px-5 py-2 rounded-full hover:bg-deepGreen transition-all">Consulta Personalizada</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-20 pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="fade-in">
+                <span class="inline-block px-4 py-1.5 bg-sand text-petroleum text-xs font-bold rounded-full mb-6 tracking-widest uppercase">Propuesta de Valor PM Culture</span>
+                <h1 class="font-serif text-5xl md:text-7xl mb-8 leading-[1.1]">Transformamos tu desorden en <span class="italic text-goldSoft">claridad real.</span></h1>
+                <p class="text-lg text-graphite mb-10 leading-relaxed max-w-lg">
+                    No somos preparadores de impuestos de temporada. Somos tu socio de cumplimiento anual, guiándote con rigor técnico y acompañamiento humano en cada decisión de tu negocio.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#calculadora" class="bg-petroleum text-white px-8 py-4 rounded-xl font-bold text-center hover:shadow-2xl hover:shadow-petroleum/20 transition-all flex items-center justify-center gap-2">
+                        Analizar mi Tarifario 2026
+                        <span class="material-symbols-outlined">arrow_downward</span>
+                    </a>
+                    <div class="flex items-center gap-3 px-4 py-2">
+                        <span class="material-symbols-outlined text-goldSoft">verified</span>
+                        <span class="text-sm font-semibold">Servicio 360° para LLCs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative fade-in" style="animation-delay: 0.2s;">
+                <div class="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRmfO5RAvOrMySPDVcSKV-bNRdraVcbDggJEGkFtBNP9ktePRE-ZfmaEusigECXVMD4G_Y_Cpw" alt="Oficina PM Culture" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-10 -left-10 bg-white p-6 rounded-3xl shadow-xl border border-sand max-w-[240px]">
+                    <span class="material-symbols-outlined text-deepGreen mb-2">forum</span>
+                    <p class="text-sm italic font-serif">"Nadie antes me explicó así. Por fin entiendo mi sistema fiscal."</p>
+                    <div class="mt-3 flex gap-1">
+                        <span class="material-symbols-outlined text-goldSoft text-xs">star</span>
+                        <span class="material-symbols-outlined text-goldSoft text-xs">star</span>
+                        <span class="material-symbols-outlined text-goldSoft text-xs">star</span>
+                        <span class="material-symbols-outlined text-goldSoft text-xs">star</span>
+                        <span class="material-symbols-outlined text-goldSoft text-xs">star</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="metodo" class="bg-petroleum py-24 text-sand relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl mb-4">El Método PM Culture</h2>
+                <p class="text-sand/60 tracking-widest uppercase text-xs">Mucho más que contabilidad: Un trayecto de orden</p>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="p-8 rounded-3xl border border-white/10 hover:bg-white/5 transition-all">
+                    <span class="text-4xl font-serif text-goldSoft mb-4 block">01</span>
+                    <h3 class="text-xl font-bold mb-3">Diagnóstico 360°</h3>
+                    <p class="text-sm opacity-70">Revisión profunda de riesgos, pendientes y prioridades fiscales.</p>
+                </div>
+                <div class="p-8 rounded-3xl border border-white/10 hover:bg-white/5 transition-all">
+                    <span class="text-4xl font-serif text-goldSoft mb-4 block">02</span>
+                    <h3 class="text-xl font-bold mb-3">Orden & Regularización</h3>
+                    <p class="text-sm opacity-70">Corrección técnica y creación de un sistema de trabajo prolijo.</p>
+                </div>
+                <div class="p-8 rounded-3xl border border-white/10 hover:bg-white/5 transition-all">
+                    <span class="text-4xl font-serif text-goldSoft mb-4 block">03</span>
+                    <h3 class="text-xl font-bold mb-3">Cumplimiento Anual</h3>
+                    <p class="text-sm opacity-70">Calendarización precisa y presentación impecable de impuestos.</p>
+                </div>
+                <div class="p-8 rounded-3xl border border-white/10 hover:bg-white/5 transition-all">
+                    <span class="text-4xl font-serif text-goldSoft mb-4 block">04</span>
+                    <h3 class="text-xl font-bold mb-3">Acompañamiento</h3>
+                    <p class="text-sm opacity-70">Educación continua y claridad mensual para tu tranquilidad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculadora" class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-12">
+
+            <div class="lg:col-span-8">
+                <div class="bg-white rounded-[2.5rem] p-10 border border-sand shadow-sm">
+                    <h2 class="font-serif text-3xl mb-10 border-b border-sand pb-6">Configura tu Perfil Fiscal 2026</h2>
+
+                    <div class="mb-12">
+                        <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-graphite mb-6">1. Tipo de Contribuyente</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <button onclick="setType('individuo')" id="btn-individuo" class="type-btn p-6 rounded-2xl border-2 text-left hover:border-sand transition-all flex flex-col gap-4 group border-petroleum bg-sand/30 scale-[1.02] shadow-lg shadow-sand/20">
+                                <span class="material-symbols-outlined text-3xl text-graphite group-hover:text-petroleum">person</span>
+                                <span class="font-bold">Individuo</span>
+                            </button>
+                            <button onclick="setType('matrimonio')" id="btn-matrimonio" class="type-btn p-6 rounded-2xl border-2 border-slate-50 text-left hover:border-sand transition-all flex flex-col gap-4 group">
+                                <span class="material-symbols-outlined text-3xl text-graphite group-hover:text-petroleum">diversity_3</span>
+                                <span class="font-bold">Matrimonio</span>
+                            </button>
+                            <button onclick="setType('familia')" id="btn-familia" class="type-btn p-6 rounded-2xl border-2 border-slate-50 text-left hover:border-sand transition-all flex flex-col gap-4 group">
+                                <span class="material-symbols-outlined text-3xl text-graphite group-hover:text-petroleum">family_restroom</span>
+                                <span class="font-bold leading-tight">Matrimonio con Hijos</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="space-y-10">
+                        <div>
+                            <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-graphite mb-6">2. Actividad Personal</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                <label class="complexity-card flex flex-col p-5 border rounded-2xl cursor-pointer hover:bg-slate-50">
+                                    <input type="radio" name="activity" value="1" checked onchange="calculate()" class="hidden peer">
+                                    <div class="peer-checked:text-petroleum opacity-40 peer-checked:opacity-100 transition-all">
+                                        <div class="font-bold mb-1">Simple</div>
+                                        <p class="text-[10px] leading-snug mb-3">Salario, W-2, Pensión o Jubilación.</p>
+                                        <div class="text-[10px] font-bold text-green-700 uppercase bg-green-50 inline-block px-2 py-0.5 rounded">Baja</div>
+                                    </div>
+                                </label>
+                                <label class="complexity-card flex flex-col p-5 border rounded-2xl cursor-pointer hover:bg-slate-50">
+                                    <input type="radio" name="activity" value="2" onchange="calculate()" class="hidden peer">
+                                    <div class="peer-checked:text-petroleum opacity-40 peer-checked:opacity-100 transition-all">
+                                        <div class="font-bold mb-1">Estándar</div>
+                                        <p class="text-[10px] leading-snug mb-3">1099, Deducción Detallada, Créditos Estudio.</p>
+                                        <div class="text-[10px] font-bold text-orange-700 uppercase bg-orange-50 inline-block px-2 py-0.5 rounded">Media</div>
+                                    </div>
+                                </label>
+                                <label class="complexity-card flex flex-col p-5 border rounded-2xl cursor-pointer hover:bg-slate-50">
+                                    <input type="radio" name="activity" value="3" onchange="calculate()" class="hidden peer">
+                                    <div class="peer-checked:text-petroleum opacity-40 peer-checked:opacity-100 transition-all">
+                                        <div class="font-bold mb-1">Compleja</div>
+                                        <p class="text-[10px] leading-snug mb-3">Bolsa, Cripto o Renta de Propiedades.</p>
+                                        <div class="text-[10px] font-bold text-red-700 uppercase bg-red-50 inline-block px-2 py-0.5 rounded">Alta</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-graphite mb-6">3. Fuentes de Ingresos</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                <label class="complexity-card flex flex-col p-5 border rounded-2xl cursor-pointer hover:bg-slate-50">
+                                    <input type="radio" name="source" value="1" checked onchange="calculate()" class="hidden peer">
+                                    <div class="peer-checked:text-petroleum opacity-40 peer-checked:opacity-100 transition-all">
+                                        <div class="font-bold mb-1">Local</div>
+                                        <p class="text-[10px] leading-snug mb-3">Única fuente dentro de Florida.</p>
+                                        <div class="text-[10px] font-bold text-green-700 uppercase bg-green-50 inline-block px-2 py-0.5 rounded">Baja</div>
+                                    </div>
+                                </label>
+                                <label class="complexity-card flex flex-col p-5 border rounded-2xl cursor-pointer hover:bg-slate-50">
+                                    <input type="radio" name="source" value="2" onchange="calculate()" class="hidden peer">
+                                    <div class="peer-checked:text-petroleum opacity-40 peer-checked:opacity-100 transition-all">
+                                        <div class="font-bold mb-1">Nacional</div>
+                                        <p class="text-[10px] leading-snug mb-3">Residentes con múltiples fuentes en Florida.</p>
+                                        <div class="text-[10px] font-bold text-orange-700 uppercase bg-orange-50 inline-block px-2 py-0.5 rounded">Media</div>
+                                    </div>
+                                </label>
+                                <label class="complexity-card flex flex-col p-5 border rounded-2xl cursor-pointer hover:bg-slate-50">
+                                    <input type="radio" name="source" value="3" onchange="calculate()" class="hidden peer">
+                                    <div class="peer-checked:text-petroleum opacity-40 peer-checked:opacity-100 transition-all">
+                                        <div class="font-bold mb-1">Internacional</div>
+                                        <p class="text-[10px] leading-snug mb-3">Form 5472, FBAR o Actividad Multi-estatal.</p>
+                                        <div class="text-[10px] font-bold text-red-700 uppercase bg-red-50 inline-block px-2 py-0.5 rounded">Alta</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-4">
+                <div class="sticky top-24 space-y-6">
+                    <div class="bg-petroleum text-sand rounded-[2.5rem] overflow-hidden shadow-2xl">
+                        <div class="p-8 text-center border-b border-white/10">
+                            <span class="text-[10px] font-bold uppercase tracking-widest opacity-60 mb-2 block">Costo de Acompañamiento</span>
+                            <div class="text-6xl font-serif">
+                                <span class="text-2xl opacity-40">$</span><span id="price" class="fade-in">180</span><span id="plus" class="text-2xl opacity-40 hidden">+</span>
+                            </div>
+                        </div>
+                        <div class="p-8 space-y-6">
+                            <div class="bg-white/5 rounded-2xl p-4 border border-white/5">
+                                <div class="text-[10px] font-bold uppercase tracking-widest opacity-50 mb-2">Estado Diagnosticado</div>
+                                <div id="badge" class="text-xs font-bold px-3 py-1 rounded-full text-green-600 bg-green-500/10">Baja Complejidad (Simple)</div>
+                            </div>
+
+                            <ul class="text-xs space-y-3 opacity-80">
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-goldSoft text-sm">check_circle</span> Diagnóstico Fiscal 360° incluido</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-goldSoft text-sm">check_circle</span> Acompañamiento en español simple</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-goldSoft text-sm">check_circle</span> Explicaciones sin tecnicismos</li>
+                                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-goldSoft text-sm">check_circle</span> Bonificación de análisis ($20)</li>
+                            </ul>
+
+                            <button class="w-full bg-sand text-petroleum py-4 rounded-2xl font-bold hover:bg-white transition-all shadow-xl shadow-black/10 flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined">calendar_today</span>
+                                Reservar Diagnóstico
+                            </button>
+                            <p class="text-[9px] text-center opacity-40 uppercase tracking-widest">Precios Temporada 2026 - LLC Florida</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-3xl border border-sand">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-10 h-10 bg-sand rounded-full flex items-center justify-center flex-shrink-0 text-petroleum">
+                                <span class="material-symbols-outlined">lightbulb</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1">El "me dijeron" te cuesta dinero</h4>
+                                <p class="text-xs text-graphite italic">"La claridad fiscal te lo ahorra. Invertir en un sistema profesional previene años de desorden."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 mb-32">
+        <div class="bg-white rounded-[2rem] border border-sand overflow-hidden shadow-sm">
+            <div class="p-10 border-b border-sand flex justify-between items-end">
+                <div>
+                    <h2 class="font-serif text-3xl mb-2">Referencia de Tarifas</h2>
+                    <p class="text-graphite text-sm">Sistema estructurado de acuerdo a tu perfil.</p>
+                </div>
+                <div class="flex items-center gap-4 text-xs font-bold uppercase text-graphite">
+                    <div class="flex items-center gap-1">
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div> Baja
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <div class="w-3 h-3 rounded-full bg-orange-500"></div> Media
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div> Alta
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-slate-50 text-[10px] font-bold uppercase tracking-widest text-graphite">
+                            <th class="p-8 text-left">Categoría de Usuario</th>
+                            <th class="p-8 text-left bg-green-50/30">Baja Complejidad</th>
+                            <th class="p-8 text-left bg-orange-50/30">Mediana Complejidad</th>
+                            <th class="p-8 text-left bg-red-50/30">Alta Complejidad</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-sand text-sm">
+                        <tr>
+                            <td class="p-8 font-bold">Individuo</td>
+                            <td class="p-8 text-graphite">$180</td>
+                            <td class="p-8 text-graphite">$360</td>
+                            <td class="p-8 text-graphite">$400+</td>
+                        </tr>
+                        <tr>
+                            <td class="p-8 font-bold">Matrimonio</td>
+                            <td class="p-8 text-graphite">$280</td>
+                            <td class="p-8 text-graphite">$440</td>
+                            <td class="p-8 text-graphite">$680+</td>
+                        </tr>
+                        <tr>
+                            <td class="p-8 font-bold">Matrimonio con Hijos</td>
+                            <td class="p-8 text-graphite">$320</td>
+                            <td class="p-8 text-graphite">$520</td>
+                            <td class="p-8 text-graphite">$760+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-24 bg-sand text-center">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="font-serif text-4xl mb-6">¿Lista para operar con tranquilidad?</h2>
+            <p class="text-graphite mb-10">Acompañamos a emprendedores que quieren hacer las cosas bien desde el principio.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="bg-petroleum text-white px-10 py-5 rounded-2xl font-bold hover:scale-105 transition-all">Agendar Mi Diagnóstico</a>
+                <a href="#" class="border-2 border-petroleum text-petroleum px-10 py-5 rounded-2xl font-bold hover:bg-petroleum hover:text-white transition-all">Ver Más Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-16 px-6 border-t border-sand">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-petroleum rounded flex items-center justify-center text-sand">
+                    <span class="material-symbols-outlined text-sm">account_balance</span>
+                </div>
+                <span class="font-serif text-lg font-bold">PM Culture</span>
+            </div>
+            <div class="flex gap-8 text-[10px] uppercase font-bold tracking-widest text-graphite">
+                <a href="#" class="hover:text-petroleum">Privacidad</a>
+                <a href="#" class="hover:text-petroleum">Términos</a>
+                <a href="#" class="hover:text-petroleum">Florida LLC Compliance</a>
+            </div>
+            <p class="text-xs text-graphite/60">© 2026 PM Culture - Branding Boutique de Impuestos.</p>
+        </div>
+    </footer>
+
+    <script>
+        const pricing = {
+            individuo: { low: 180, mid: 360, high: 400 },
+            matrimonio: { low: 280, mid: 440, high: 680 },
+            familia: { low: 320, mid: 520, high: 760 }
+        };
+
+        let currentType = 'individuo';
+
+        function setType(type) {
+            currentType = type;
+
+            // UI Update: Reset all buttons
+            document.querySelectorAll('.type-btn').forEach(btn => {
+                btn.classList.remove('border-petroleum', 'bg-sand/30', 'scale-[1.02]', 'shadow-lg', 'shadow-sand/20');
+                btn.classList.add('border-slate-50');
+            });
+
+            // Activate selected button
+            const activeBtn = document.getElementById(`btn-${type}`);
+            activeBtn.classList.add('border-petroleum', 'bg-sand/30', 'scale-[1.02]', 'shadow-lg', 'shadow-sand/20');
+            activeBtn.classList.remove('border-slate-50');
+
+            calculate();
+        }
+
+        function calculate() {
+            // Get values from radio inputs
+            const activityVal = parseInt(document.querySelector('input[name="activity"]:checked').value);
+            const sourceVal = parseInt(document.querySelector('input[name="source"]:checked').value);
+
+            // Logic: Max complexity determines tier
+            const tier = Math.max(activityVal, sourceVal);
+
+            let price = 0;
+            let label = "";
+            let color = "";
+            let plus = false;
+
+            if (tier === 1) {
+                price = pricing[currentType].low;
+                label = "Baja Complejidad (Simple)";
+                color = "text-green-600 bg-green-500/10";
+            } else if (tier === 2) {
+                price = pricing[currentType].mid;
+                label = "Media Complejidad (Estándar)";
+                color = "text-orange-600 bg-orange-500/10";
+            } else {
+                price = pricing[currentType].high;
+                label = "Alta Complejidad (Especial)";
+                color = "text-red-600 bg-red-500/10";
+                plus = true;
+            }
+
+            // Update DOM Elements
+            const priceEl = document.getElementById('price');
+            const plusEl = document.getElementById('plus');
+            const badgeEl = document.getElementById('badge');
+
+            priceEl.innerText = price;
+
+            if (plus) plusEl.classList.remove('hidden');
+            else plusEl.classList.add('hidden');
+
+            badgeEl.innerText = label;
+            badgeEl.className = `text-xs font-bold px-3 py-1 rounded-full ${color}`;
+
+            // Trigger Animation for price change
+            priceEl.classList.remove('fade-in');
+            void priceEl.offsetWidth; // Trigger reflow
+            priceEl.classList.add('fade-in');
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            setType('individuo');
+        });
+    </script>
+
+</body>
 </html>
